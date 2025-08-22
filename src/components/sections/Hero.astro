@@ -9,7 +9,7 @@ import GitHub from "@/icons/GitHub.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 import type { SocialIcon } from "@/types"
 
-const { name, label, image, location, profiles, phone, email } = basics
+const { name, label, image, cv, location, profiles, phone, email } = basics
 const { city, region } = location
 
 const SOCIAL_ICONS: SocialIcon = { GitHub, LinkedIn, X }
@@ -18,22 +18,25 @@ const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
 const linkedUrl = linkedInfo?.url
 const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
 
-// ---------- URL de imagen desde `public/` respetando el base ----------
-const raw = (image ?? "").toString()
-
+// ---------- Helpers para URLs desde `public/` respetando el base ----------
 function withBase(path: string) {
-  // base puede venir como "/portfolio" (sin slash final)
   const base = import.meta.env.BASE_URL.endsWith("/")
     ? import.meta.env.BASE_URL
     : `${import.meta.env.BASE_URL}/`
-  // quitamos cualquier "/" inicial del path
-  const clean = path.replace(/^\/+/, "")
+  const clean = (path ?? "").toString().replace(/^\/+/, "")
   return `${base}${clean}`
 }
 
-const isAbsolute = /^https?:\/\//i.test(raw)
-const isAlreadyBase = raw.startsWith(import.meta.env.BASE_URL)
-const imgSrc = isAbsolute || isAlreadyBase ? raw : withBase(raw)
+const rawImg = (image ?? "").toString()
+const imgIsAbs = /^https?:\/\//i.test(rawImg)
+const imgIsBase = rawImg.startsWith(import.meta.env.BASE_URL)
+const imgSrc = rawImg ? (imgIsAbs || imgIsBase ? rawImg : withBase(rawImg)) : ""
+
+// CV (PDF)
+const rawCv = (cv ?? "").toString()
+const cvIsAbs = /^https?:\/\//i.test(rawCv)
+const cvIsBase = rawCv.startsWith(import.meta.env.BASE_URL)
+const cvHref = rawCv ? (cvIsAbs || cvIsBase ? rawCv : withBase(rawCv)) : null
 ---
 
 <Section>
@@ -47,7 +50,9 @@ const imgSrc = isAbsolute || isAlreadyBase ? raw : withBase(raw)
         {city}, {region}
       </span>
 
-      <footer class="print">{printInfo}</footer>
+      <footer class="print">
+        {printInfo}
+      </footer>
 
       <footer class="no-print">
         {email && (
@@ -68,11 +73,22 @@ const imgSrc = isAbsolute || isAlreadyBase ? raw : withBase(raw)
             </a>
           )
         })}
+        {cvHref && (
+          <a
+            class="btn-cv"
+            href={cvHref}
+            title={`Abrir el CV de ${name} en una pestaña nueva`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver cv
+          </a>
+        )}
       </footer>
     </div>
 
     <figure>
-      <img src={imgSrc} alt={name} />
+      {imgSrc && <img src={imgSrc} alt={name} />}
     </figure>
   </div>
 </Section>
@@ -85,21 +101,83 @@ const imgSrc = isAbsolute || isAlreadyBase ? raw : withBase(raw)
     justify-content: space-between;
     gap: 1rem;
   }
+
   .info { display: flex; flex-direction: column; gap: .5rem; padding-right: 32px; }
+
   h1 { font-size: 2rem; }
   h2 { color: #444; font-weight: 500; font-size: 1.1rem; text-wrap: balance; }
 
   img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    width: 328px;
+    width: 328px;         /* ajusta el tamaño de tu foto aquí */
     border-radius: 16px;
   }
 
-  span { color: #666; display: flex; align-items: center; gap: .25rem; font-size: .85rem; letter-spacing: -0.05rem; }
-  footer { color: #555; font-size: .65rem; display: flex; gap: 4px; margin-top: 8px; }
-  footer a { color: #777; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #eee; padding: 4px; height: 32px; width: 32px; border-radius: 6px; transition: all .3s ease; }
+  span {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .85rem;
+    letter-spacing: -0.05rem;
+  }
+
+  footer {
+    color: #555;
+    font-size: .65rem;
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+
+  footer a {
+    color: #777;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    transition: all .3s ease;
+    text-decoration: none;
+  }
+
   footer a:hover { background: #eee; border: 1px solid #ddd; }
+
+/* Botón “Ver CV” — más largo y plomo */
+.btn-cv {
+  width: auto;            /* ignora el width de los iconos */
+  min-width: 88px;       /* ← alárgalo: prueba 160–200px */
+  height: 44px;
+  padding: 0 28px;        /* ← más espacio a los lados */
+  border-radius: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #ffffffff;    /* plomo */
+  border-color: #ffffffff;
+  color: #7b7b7bff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;   /* por si algún estilo hereda subrayado */
+}
+
+/* Hover */
+.btn-cv:hover {
+  background: #ffffffff;    /* plomo más oscuro */
+  border-color: #ffffffff;
+  color: #777777ff;
+}
+
+
 
   @media (width <= 700px) {
     .container { flex-direction: column-reverse; }

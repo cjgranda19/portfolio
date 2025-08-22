@@ -1,12 +1,13 @@
 {
   "basics": {
     "name": "Carlos Javier Granda Velásquez",
-    "label": "Desarrollador Frontend / QA | Estudiante de Ingeniería en Software (ESPE)",
+    "label": "Desarrollador Full-Stack / QA | Estudiante de Ingeniería en Software (ESPE)",
     "image": "foto.png",
+    "cv": "CV.pdf",
     "email": "cgranda.567@gmail.com",
     "phone": "+593997884812",
-    "url": "https://yourwebsite.com",
-    "summary": "Estudiante de Ingeniería en Software (ESPE) con experiencia en backend y frontend (Node.js y React) y enfoque en QA. Integro buenas prácticas como pruebas automatizadas, CI/CD y control de calidad. Busco aportar en roles de Frontend o QA con soluciones escalables y confiables.",
+    "url": "https://cjgranda19.github.io/portfolio/",
+    "summary": "Estudiante de Ingeniería en Software en la universidad de las Fuerzas Armadas ESPE con experiencia en backend y frontend (Node.js y React) y enfoque en QA. Integro buenas prácticas como pruebas automatizadas, CI/CD y control de calidad. Busco aportar en roles de Full-Stack o QA con soluciones escalables y confiables.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -31,7 +32,7 @@
     {
       "name": "Prowess Agrícola (Vinculación con la Sociedad)",
       "position": "Desarrollador Frontend",
-      "url": "",
+      "url": "https://prowessec.com/",
       "startDate": "2024-01-01",
       "endDate": "2024-12-31",
       "summary": "Diseño e implementación de componentes web, integrando backend y frontend para crear interfaces responsivas y mejorar la experiencia de usuario.",
@@ -44,7 +45,7 @@
     {
       "name": "Sombreros Shapikuna",
       "position": "Desarrollador Full-Stack Freelance",
-      "url": "",
+      "url": "https://e-commerce-saphikuna.vercel.app/",
       "startDate": "2024-01-01",
       "endDate": "2024-12-31",
       "summary": "Desarrollo de un sistema integral para gestión de productos artesanales con módulos de inventario, pedidos y catálogo en línea.",
