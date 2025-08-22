@@ -1,0 +1,208 @@
+{
+  "basics": {
+    "name": "Carlos Javier Granda Velásquez",
+    "label": "Desarrollador Frontend / QA | Estudiante de Ingeniería en Software (ESPE)",
+    "image": "/foto.png",
+    "email": "cgranda.567@gmail.com",
+    "phone": "+593997884812",
+    "url": "https://yourwebsite.com",
+    "summary": "Estudiante de Ingeniería en Software (ESPE) con experiencia en backend y frontend (Node.js y React) y enfoque en QA. Integro buenas prácticas como pruebas automatizadas, CI/CD y control de calidad. Busco aportar en roles de Frontend o QA con soluciones escalables y confiables.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Quito",
+      "countryCode": "EC",
+      "region": "Ecuador"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Carlos Granda",
+        "url": "https://www.linkedin.com/in/carlos-granda-72a516308"
+      },
+      {
+        "network": "GitHub",
+        "username": "cjgranda19",
+        "url": "https://github.com/cjgranda19"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Prowess Agrícola (Vinculación con la Sociedad)",
+      "position": "Desarrollador Frontend",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "summary": "Diseño e implementación de componentes web, integrando backend y frontend para crear interfaces responsivas y mejorar la experiencia de usuario.",
+      "highlights": [
+        "Integración con APIs/servicios del backend",
+        "Diseño de componentes UI reutilizables",
+        "Mejora de usabilidad y comunicación con la capa de datos"
+      ]
+    },
+    {
+      "name": "Sombreros Shapikuna",
+      "position": "Desarrollador Full-Stack Freelance",
+      "url": "",
+      "startDate": "2024-01-01",
+      "endDate": "2024-12-31",
+      "summary": "Desarrollo de un sistema integral para gestión de productos artesanales con módulos de inventario, pedidos y catálogo en línea.",
+      "highlights": [
+        "Desarrollo de lógica de backend y diseño de frontend",
+        "Gestión de inventario y pedidos",
+        "Catálogo en línea para productos"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Universidad de las Fuerzas Armadas ESPE",
+      "url": "https://www.espe.edu.ec",
+      "area": "Ingeniería en Software",
+      "studyType": "Ingeniería (en curso)",
+      "startDate": "2022-11-01",
+      "endDate": null,
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Colegio Marcos Ochoa Muñoz",
+      "url": "",
+      "area": "Bachillerato General Unificado",
+      "studyType": "Secundaria",
+      "startDate": "2015-05-01",
+      "endDate": "2021-03-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [
+    {
+      "name": "Uso educativo de la inteligencia artificial en proyectos de programación: caso de estudiantes de Ingeniería",
+      "publisher": "Libro de Actas del XXVII Congreso Internacional sobre Tecnología Educativa (EDUTEC 2024)",
+      "releaseDate": "2024-11-01",
+      "url": "",
+      "summary": "Capítulo publicado como coautor, con aporte en desarrollo de software e IA aplicada a educación."
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "level": "Intermedio-Avanzado",
+      "keywords": ["Frontend", "Backend", "Full-Stack"]
+    },
+    {
+      "name": "Node.js",
+      "level": "Intermedio-Avanzado",
+      "keywords": ["APIs", "Express", "Backend"]
+    },
+    {
+      "name": "React",
+      "level": "Intermedio-Avanzado",
+      "keywords": ["Componentes", "SPA", "Frontend"]
+    },
+    {
+      "name": "Flutter",
+      "level": "Intermedio",
+      "keywords": ["Móvil", "Android", "iOS"]
+    },
+    {
+      "name": "Python",
+      "level": "Intermedio",
+      "keywords": ["APIs", "Flask", "Automatización"]
+    },
+    {
+      "name": "SQL / NoSQL",
+      "level": "Intermedio",
+      "keywords": ["PostgreSQL", "MongoDB"]
+    },
+    {
+      "name": "QA y Performance",
+      "level": "Intermedio",
+      "keywords": ["Postman", "JMeter", "K6", "OWASP ZAP", "Jasmine", "Karma"]
+    },
+    {
+      "name": "CI/CD",
+      "level": "Intermedio",
+      "keywords": ["GitHub Actions", "Firebase Deploy"]
+    },
+    {
+      "name": "Redes",
+      "level": "Intermedio",
+      "keywords": ["Cisco Packet Tracer", "VLANs", "OSPF", "EIGRP", "VPN"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Intermedio (B1/B2)"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Sistema de Gestión de Panadería",
+      "isActive": true,
+      "description": "Sistema con Node.js, Vite y MongoDB para gestionar inventario, pedidos y pagos en línea.",
+      "highlights": [
+        "Pruebas de carga con JMeter y K6",
+        "Arquitectura enfocada en escalabilidad y confiabilidad"
+      ],
+      "url": "https://github.com/cjgranda19/panaderiaItaliana",
+      "github": "https://github.com/cjgranda19/panaderiaItaliana"
+    },
+    {
+      "name": "Smart Rural Ecuador",
+      "isActive": true,
+      "description": "Plataforma para turismo rural (Loja) con backend en Flask y app Flutter; análisis de sentimientos (NLP) y lógica difusa para evaluar accesibilidad.",
+      "highlights": [
+        "Integración móvil + backend",
+        "Análisis de sentimientos (NLP) y lógica difusa"
+      ],
+      "url": "https://github.com/cjgranda19/SmartRural_Puyango",
+      "github": "https://github.com/cjgranda19/SmartRural_Puyango"
+    },
+    {
+      "name": "Proyectos de QA",
+      "isActive": true,
+      "description": "Aseguramiento de calidad con pruebas automatizadas y de rendimiento.",
+      "highlights": [
+        "OWASP ZAP, Postman, JMeter y K6",
+        "Casos de prueba funcionales para módulos críticos"
+      ],
+      "url": "https://github.com/cjgranda19/Pruebas_OWASPZAP_Postman",
+      "github": "https://github.com/cjgranda19/Pruebas_OWASPZAP_Postman"
+    },
+    {
+      "name": "CI/CD con GitHub Actions",
+      "isActive": true,
+      "description": "Pipelines para ejecutar pruebas y despliegues automatizados.",
+      "highlights": [
+        "Integración continua y despliegue continuo",
+        "Automatización de pruebas"
+      ],
+      "url": "https://github.com/cjgranda19/Lab2_PruebasConGitHubActions",
+      "github": "https://github.com/cjgranda19/Lab2_PruebasConGitHubActions"
+    },
+    {
+      "name": "Pruebas unitarias en Angular",
+      "isActive": true,
+      "description": "Proyecto académico con pruebas unitarias de componentes y servicios usando Jasmine y Karma.",
+      "highlights": [
+        "Aseguramiento de calidad en frontend",
+        "Ejecución de pruebas antes del despliegue"
+      ],
+      "url": "https://github.com/cjgranda19/Aplicacion-PruebasUnitarias-angular",
+      "github": "https://github.com/cjgranda19/Aplicacion-PruebasUnitarias-angular"
+    }
+  ]
+}
